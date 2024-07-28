@@ -9,7 +9,7 @@ const Navbar = () => {
     
   return (
     <section className="bg-white">
-      <nav className='flex items-center justify-between p-4 text-sm'>
+      <nav className='flex items-center justify-between p-4 text-[12px]'>
         <div className='flex space-x-6'>
           <NavLink
             to='/menswear'

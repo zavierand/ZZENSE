@@ -1,9 +1,15 @@
 import React from 'react'
 
+// import necessary components
+import SideMenu from '../components/SideMenu.jsx';
+
 const Menswear = () => {
   return (
-    <div>Menswear</div>
+    <div>
+        <SideMenu />
+        
+    </div>
   )
 }
 
-export default Menswear
+export default Menswear;

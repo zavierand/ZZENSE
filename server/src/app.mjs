@@ -8,6 +8,7 @@ import mongoose from 'mongoose';
 
 // import models
 import Products from './models/productSchema.mjs';
+import Designers from './models/designerSchema.mjs';
 import User from './models/userSchema.mjs';
 
 // import our environment variables
@@ -49,29 +50,50 @@ app.get('/', (req, res) => {
     
 });
 
-// store products in DB
 app.get('/products', async (req, res) => {
-    // log request methods
+    // Log request method and body
     console.log('GET request to /products', req.body, req.method);
+  
     try {
-        const products = await Products.find();
-        res.json(products);
-        console.log(products);
-    } catch(err) {
-        console.error('Error fetching /products', err);
+      // Fetch all products from the database
+      const products = await Products.find();
+  
+      // Send the products as a JSON response
+      res.json(products);
+  
+      // Log the fetched products
+      console.log(products);
+    } catch (err) {
+      // Log and send the error response
+      console.error('Error fetching /products', err);
+      res.status(500).json({ message: 'Error fetching products' });
     }
-});
+  });
 
 // this will probably be a route method because I want to pos
 app.get('/users', async (req, res) => {
-    console.log('GET request to /users');
-    console.log(req.params.id);
     try {
+        console.log('GET request to /users');
+        console.log(req.body, req.method);
         const users = await User.find();
         res.json(users);
     } catch(err) {
         console.error('Error fetching /users', err);
     }
+});
+
+// designers route for menu
+app.get('/designers', async (req, res) => {
+    try {
+        console.log('/GET request to /designers');
+        console.log(req.body, req.method);
+        const designers = await Designers.find();
+        res.json(designers);
+        console.log(designers);
+    } catch(err) {
+        console.error('Error fetching /designers', err);
+    }
+
 });
 
 app.listen(PORT, () => {

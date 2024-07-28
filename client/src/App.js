@@ -20,12 +20,12 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route to='/' element={<Home />} />
-        <Route to='/menswear' element={<Menswear />} />
-        <Route to='/womenswear' element={<Womenswear />} />
-        <Route to='/everything-else' element={<EverythingElse />} />
-        <Route to='/sale' element={<Sale />} />
-        <Route to='/login' element={<Login />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/menswear' element={<Menswear />} />
+        <Route path='/womenswear' element={<Womenswear />} />
+        <Route path='/everything-else' element={<EverythingElse />} />
+        <Route path='/sale' element={<Sale />} />
+        <Route path='/login' element={<Login />} />
       </Routes>
     </Router>
   );
