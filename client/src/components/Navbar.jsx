@@ -8,8 +8,8 @@ const Navbar = () => {
 
     
   return (
-    <section className="bg-white">
-      <nav className='flex items-center justify-between p-4 text-[12px]'>
+    <section className="fixed bg-transparent w-full h-12 p-4 z-10">
+      <nav className='flex items-center justify-between text-[12px]'>
         <div className='flex space-x-6'>
           <NavLink
             to='/menswear'

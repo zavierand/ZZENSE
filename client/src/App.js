@@ -21,10 +21,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/menswear' element={<Menswear />} />
-        <Route path='/womenswear' element={<Womenswear />} />
-        <Route path='/everything-else' element={<EverythingElse />} />
-        <Route path='/sale' element={<Sale />} />
+        <Route path='/menswear/*' element={<Menswear />} />
+        <Route path='/womenswear/*' element={<Womenswear />} />
+        <Route path='/everything-else/*' element={<EverythingElse />} />
+        <Route path='/sale/*' element={<Sale />} />
         <Route path='/login' element={<Login />} />
       </Routes>
     </Router>
