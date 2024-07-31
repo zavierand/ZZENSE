@@ -26,6 +26,8 @@ const ProductPage = () => {
     country
   } = product;
 
+  console.log('product', product);
+
   return (
     <div className={`absolute w-screen h-screen mx-auto px-4 py-8 font-['Inter']`}>
       <div className="flex flex-col flex items-center lg:flex-row lg:space-x-8">
@@ -57,21 +59,36 @@ const ProductPage = () => {
         </div>
         
         {/* Right Column (Price and Actions) */}
-        <div className="flex-1 lg:w-1/3 text-[12px] font-['Inter'] lg:pl-8 flex flex-col items-center">
-          <p className="mb-4 text-right"><span className='italic'>$</span>{price} USD</p>
-          <div className="w-full">
-            <select className="border border-black mb-4 w-full py-2 px-3">
-              <option>SELECT A SIZE</option>
-              <option>XS</option>
-              <option>SM</option>
-              <option>M</option>
-              <option>L</option>
-            </select>
-            <button className="bg-black text-white py-2 px-4 w-full hover:bg-gray-800 transition">
+        <div className="flex-1 lg:w-1 text-[12px] font-['Inter'] lg:pl-8 flex flex-col">
+          <div className="flex justify-between items-center mb-4">
+            <p className="text-right"><span className='italic'>$</span>{price} USD</p>
+          </div>
+          <div className="w-full text-[10px]">
+            {product.type === 'clothing' ? (
+              <select className="border border-black mb-3 w-full py-2 px-3">
+                <option disabled>
+                  SELECT A SIZE
+                </option>
+                {/* Render size options based on whether the piece is clothing */}
+                {Object.entries(product.sizes).map(([size, stock], index) => (
+                  <option 
+                    key={index} 
+                    disabled={stock === 0} 
+                    //className={stock === 0 ? 'select-none' : ''}
+                  >
+                    {size} - {stock === 0 ? 'Sold Out' : `Only ${stock} remaining`}
+                  </option>
+                ))}
+              </select>
+            ) : null}
+            <button className="bg-black font-bold text-white py-3 px-2 w-2/3 hover:bg-gray-800 transition">
               ADD TO BAG
             </button>
-            <p className={stock < 5 ? 'text-gray-700 mt-2' : 'hidden'}>
-              Less than 5 in stock ({stock})
+            <button className="bg-white font-bold text-black py-3 px-2 w-1/3 transition">
+              ADD TO WISHLIST
+            </button>
+            <p className='py-2 text-gray-500 text-[11px]'>
+            United States : Free shipping on orders over $300 USD and free returns on all orders. 
             </p>
           </div>
         </div>

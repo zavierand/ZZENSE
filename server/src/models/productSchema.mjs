@@ -51,6 +51,15 @@ const productSchema = new mongoose.Schema({
   country: {
     type: String,
     required: false,
+  },
+  sizes: {
+    type: Map,
+    of: Number,
+    required: false,
+  },
+  sale: {
+    type: mongoose.Decimal128,
+    required: false
   }
 }, {
   discriminatorKey: 'type',
@@ -60,44 +69,3 @@ const productSchema = new mongoose.Schema({
 const Products = mongoose.model('Products', productSchema);
 
 export default Products;
-
-/**
- * 
-db.products.insertOne({
-  "name": "",
-  "designer": "Acne",
-  "price": 1234,
-  "stock": 5,
-  "type": "Clothing",
-  "gender": "mens"
-})
-
-db.products.insertOne({
-  "name": "Earrings",
-  "designer": "Test Designer",
-  "price": 1234,
-  "stock": 5,
-  "type": "Accessory",
-  "gender": "mens"
-})
-
-db.products.insertOne({
-  "name": "Test Bags",
-  "designer": "Junya Watanabe",
-  "price": 1234,
-  "stock": 5,
-  "type": "bags",
-  "gender": "mens"
-})
-
-db.products.insertOne({
-  "name": "Test Shoes",
-  "designer": "Test Designer",
-  "price": 1234,
-  "stock": 5,
-  "type": "shoes",
-})
-
-
-
-*/
