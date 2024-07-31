@@ -4,6 +4,7 @@ import Womenswear from './Womenswear.jsx';
 import EverythingElse from './EverythingElse.jsx';
 import Sale from './Sale.jsx';
 import Login from './Login.jsx';
+import ProductPage from './ProductPage.jsx';
 
 export {
     Home,
@@ -11,5 +12,6 @@ export {
     Womenswear,
     EverythingElse,
     Sale,
-    Login
+    Login,
+    ProductPage
 };

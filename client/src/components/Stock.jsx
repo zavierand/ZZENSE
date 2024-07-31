@@ -1,4 +1,7 @@
+// import dependencies
 import React, { useState, useEffect } from 'react';
+
+// import components
 import Product from './Product.jsx';
 
 // import data
@@ -10,7 +13,7 @@ reusable over different pages. It takes the gender prop to filter
 products by gender.
 ******************************************************************/
 
-const Stock = ({ gender }) => {
+const Stock = ({ gender, designerName }) => {
   const [productsList, setProductsList] = useState([]);
   const productsAPI = process.env.REACT_APP_PRODUCTS;
 
@@ -33,7 +36,9 @@ const Stock = ({ gender }) => {
   }, [productsAPI]);
 
   // This should return the filtered products based on mens/womens
-  const filterProducts = productsList.filter((product) => product.gender === gender);
+  const filterProducts = productsList.filter((product) => (
+    product.gender === gender && (!designerName || product.designer === designerName)
+  ));
 
   console.log('Filtered Products', filterProducts);
 

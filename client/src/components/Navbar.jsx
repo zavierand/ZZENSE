@@ -12,13 +12,13 @@ const Navbar = () => {
       <nav className='flex items-center justify-between text-[12px]'>
         <div className='flex space-x-6'>
           <NavLink
-            to='/menswear'
+            to='/men'
             className={({ isActive }) => isActive ? `font-['Inter'] text-black underline` : `font-['Inter'] text-gray-600 hover:underline`}
           >
             MENSWEAR
           </NavLink>
           <NavLink
-            to='/womenswear'
+            to='/women'
             className={({ isActive }) => isActive ? `font-['Inter'] text-black underline` : `font-['Inter'] text-gray-600 hover:underline`}
           >
             WOMENSWEAR
@@ -65,7 +65,7 @@ const Navbar = () => {
             to='/shopping-cart'
             className={({ isActive }) => isActive ? `font-['Inter'] text-black underline` : `font-['Inter'] text-gray-600 hover:underline`}
           >
-            SHOPPING CART ({itemCount})
+            SHOPPING BAG ({itemCount})
           </NavLink>
         </div>
       </nav>

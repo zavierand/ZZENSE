@@ -6,13 +6,15 @@ const Product = ({ product, image }) => {
     designer,
     name,
     price,
+    gender
   } = product;
 
   return (
     <div className="w-full">
       <NavLink 
-        to={`*/${designer}/${name}`} 
-        className="product-link">
+        to={`/${designer}/${name}`}
+        state={{ product }}
+      >
         <img
           src={image}
           alt={name}
