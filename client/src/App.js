@@ -14,7 +14,8 @@ import {
   EverythingElse, 
   Sale, 
   Login,
-  ProductPage 
+  ProductPage,
+  ShoppingBag
 } from './pages';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path='/everything-else/*' element={<EverythingElse />} />
         <Route path='/sale/*' element={<Sale />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/shopping-bag' element={<ShoppingBag />} />
 
         {/*dynamically render designers/types of clothing*/}
         <Route path='/:designer/:name' element={<ProductPage />} /> 

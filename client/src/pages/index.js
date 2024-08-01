@@ -5,6 +5,7 @@ import EverythingElse from './EverythingElse.jsx';
 import Sale from './Sale.jsx';
 import Login from './Login.jsx';
 import ProductPage from './ProductPage.jsx';
+import ShoppingBag from './ShoppingBag.jsx';
 
 export {
     Home,
@@ -13,5 +14,6 @@ export {
     EverythingElse,
     Sale,
     Login,
-    ProductPage
+    ProductPage,
+    ShoppingBag
 };

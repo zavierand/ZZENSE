@@ -62,7 +62,7 @@ const Navbar = () => {
             WISHLIST
           </NavLink>
           <NavLink
-            to='/shopping-cart'
+            to='/shopping-bag'
             className={({ isActive }) => isActive ? `font-['Inter'] text-black underline` : `font-['Inter'] text-gray-600 hover:underline`}
           >
             SHOPPING BAG ({itemCount})
