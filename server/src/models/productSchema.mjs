@@ -6,7 +6,8 @@ const productSchema = new mongoose.Schema({
     required: true
   },
   designer: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Designer', // reference to Designer model
     required: true,
   },
   price: {

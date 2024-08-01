@@ -9,6 +9,8 @@ const Product = ({ product, image }) => {
     gender
   } = product;
 
+  console.log(product);
+
   return (
     <div className="w-full">
       <NavLink 
@@ -21,7 +23,7 @@ const Product = ({ product, image }) => {
           className="w-full h-full"
         />
         <div className={`text-[11px] font-['Inter']`}>
-          <p className='mt-2'>{designer}</p>
+          <p className='mt-2'>{designer.designer}</p>
           <p>{name}</p>
           <p>${price}</p>
         </div>

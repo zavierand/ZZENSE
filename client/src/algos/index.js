@@ -30,7 +30,7 @@ const merge = (arr, l, m, r) => {
     let k = l;
 
     while (i < n_1 && j < n_2) {
-        if (left[i].name <= right[j].name) {
+        if (left[i].designer <= right[j].designer) {
             arr[k] = left[i];
             i++;
         } else {

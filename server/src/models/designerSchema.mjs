@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 const designerSchema = new mongoose.Schema({
-    name: {
+    designer: {
         type: String,
         required: true,
     },

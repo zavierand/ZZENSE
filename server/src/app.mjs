@@ -56,7 +56,7 @@ app.get('/products', async (req, res) => {
   
     try {
       // Fetch all products from the database
-      const products = await Products.find();
+      const products = await Products.find().populate('designer');
   
       // Send the products as a JSON response
       res.json(products);

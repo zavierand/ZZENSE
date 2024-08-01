@@ -82,17 +82,17 @@ const LeftSideMenu = () => {
       </div>
       <NavLink
           to='/designers'
-          className={({ isActive }) => isActive ? `text-black text-[12px] font-bold font-['Inter'] underline` : `text-black text-[11px] font-bold font-['Inter'] hover:underline`}
+          className={({ isActive }) => isActive ? `text-black text-[10px] font-bold font-['Inter'] underline` : `text-black text-[11px] font-bold font-['Inter'] hover:underline`}
       >
           ALL DESIGNERS
       </NavLink>
           {designers.map((designer, index) => (
           <NavLink
               key={index}
-              to={`/designers/${designer.name}`}
+              to={`/designers/${designer.designer}`}
               className={({ isActive }) => isActive ? `py-4 mt-2 text-black text-[11px] font-normal font-['Inter'] underline` : `block py-[2px] text-black text-[11px] font-normal font-['Inter'] hover:underline`}
           >
-              {designer.name}
+              {designer.designer}
           </NavLink>
           ))}
       </div>
