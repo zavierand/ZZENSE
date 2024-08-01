@@ -36,14 +36,20 @@ const LeftSideMenu = () => {
         console.error('Error fetching designers API', err);
       }
     };
-
+    
     fetchData();
   }, [designersAPI]);
-
+  
   mergeSort(designers, 0, designers.length - 1);
+  
+  /* arrow function to decode url to handle spaces in designer/product name
+  const formatForUrl = (str) => str.replace(/\s+/g, '-').toLowerCase();
 
+  const formattedDesigner = formatForUrl(designers.designer);
+
+  */
   return (
-    <div className='w-32 absolute pt-24 pl-4 mt-2'>
+    <div className='w-48 absolute pt-24 pl-4 mt-2'>
     {/* left side menu */}
       <div>
       <NavLink 

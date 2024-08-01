@@ -6,15 +6,19 @@ const Product = ({ product, image }) => {
     designer,
     name,
     price,
-    gender
   } = product;
 
-  console.log('product designer:', product.designer);
+  // arrow function to decode url to handle spaces in designer/product name
+  const formatForUrl = (str) => str.replace(/\s+/g, '-').toLowerCase();
+
+  // format designer and name for the URL
+  const formattedDesigner = formatForUrl(designer.designer);
+  const formattedName = formatForUrl(name);
 
   return (
     <div className="w-full">
       <NavLink 
-        to={`/${designer.designer}/${name}`}
+        to={`/${formattedDesigner}/${formattedName}`}
         state={{ product }}
       >
         <img
