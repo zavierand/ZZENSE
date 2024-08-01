@@ -9,12 +9,12 @@ const Product = ({ product, image }) => {
     gender
   } = product;
 
-  console.log(product);
+  console.log('product designer:', product.designer);
 
   return (
     <div className="w-full">
       <NavLink 
-        to={`/${designer}/${name}`}
+        to={`/${designer.designer}/${name}`}
         state={{ product }}
       >
         <img

@@ -33,7 +33,7 @@ const ProductPage = () => {
       <div className="flex flex-col flex items-center lg:flex-row lg:space-x-8">
         {/* Left Column (Details, Overview, and Points) */}
         <div className="flex-1 text-[11px] lg:w-1/3 lg:pr-8 text-[11px]">
-          <p className="text-gray-700">{designer}</p>
+          <p>{designer.designer}</p>
           <p className="mb-2">{name}</p>
           <p className="mb-4">{overview}</p>
           <ul className="list-disc list-inside mb-4">
