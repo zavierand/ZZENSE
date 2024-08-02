@@ -4,7 +4,6 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
 // import components
 import Navbar from './components/Navbar.jsx';
-import Stock from './components/Stock.jsx';
 
 // import pages
 import { 
@@ -15,7 +14,8 @@ import {
   Sale, 
   Login,
   ProductPage,
-  ShoppingBag
+  ShoppingBag,
+  DesignerPage
 } from './pages';
 
 function App() {
@@ -33,16 +33,8 @@ function App() {
         <Route path='/shopping-bag' element={<ShoppingBag />} />
 
         {/*dynamically render designers/types of clothing*/}
-        <Route path='/:designer/:name' element={<ProductPage />} /> 
-
-        {/**
-         * 
-         
-         dynamically render products 
-         <Route path='/:designer' element={<Stock />} />
-         * 
-         * 
-         */}
+        <Route path='/:designer/:name' element={<ProductPage />} />
+        <Route path='/:designer' element={<DesignerPage />} />
 
       </Routes>
     </Router>

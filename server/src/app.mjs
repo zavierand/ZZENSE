@@ -82,6 +82,10 @@ app.get('/users', async (req, res) => {
     }
 });
 
+app.route('/demo-shopping-bag', (req, res) => {
+    
+});
+
 // designers route for menu
 app.get('/designers', async (req, res) => {
     try {

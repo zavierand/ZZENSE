@@ -21,11 +21,13 @@ const Product = ({ product, image }) => {
         to={`/${formattedDesigner}/${formattedName}`}
         state={{ product }}
       >
-        <img
-          src={image}
-          alt={name}
-          className="w-full h-full"
-        />
+        {image ? (
+          <img
+            src={image}
+            alt={name}
+            className="w-full h-full"
+          />
+        ) : null}
         <div className={`text-[11px] font-['Inter']`}>
           <p className='mt-2'>{designer.designer}</p>
           <p>{name}</p>

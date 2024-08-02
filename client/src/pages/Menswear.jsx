@@ -9,10 +9,10 @@ import Stock from '../components/Stock.jsx';
 const Menswear = () => {
   return (
     <div>
-        <SideMenu />
-        <RightSideMenu />
-        <Stock gender='mens' />
-        <Outlet />
+      <SideMenu />
+      <RightSideMenu />
+      <Stock gender='mens' />
+      <Outlet />
     </div>
   )
 }

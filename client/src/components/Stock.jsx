@@ -35,7 +35,7 @@ const Stock = ({ gender, designerName }) => {
     fetchData();
   }, [productsAPI]);
 
-  // This should return the filtered products based on mens/womens
+  // This should return the filtered products based on mens/womens or designer name
   const filterProducts = productsList.filter((product) => (
     product.gender === gender && (!designerName || product.designer === designerName)
   ));
@@ -43,7 +43,7 @@ const Stock = ({ gender, designerName }) => {
   console.log('Filtered Products', filterProducts);
 
   return (
-    <div className='pt-24 px-64 grid grid-cols-4 flex items-center justify-center'>
+    <div className='pt-24 px-64 grid grid-cols-4 gap-3 flex items-center justify-center'>
       {filterProducts.map((product) => {
         const imageUrl = productImg[product.name]; // Assuming productImg keys are product names
         return (

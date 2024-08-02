@@ -2,7 +2,7 @@ import React from 'react'
 
 const RightSideMenu = () => {
   return (
-    <div className='absolute pt-24 pl-4 right-0 p-4 w-64'>
+    <div className='absolute pt-24 pl-4 right-0 p-4 w-32'>
       <p className={`font-['Inter'] font-bold text-[11px]`}>
         SORT
       </p>
